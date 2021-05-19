@@ -3,6 +3,8 @@ package com.example.thymeleaf.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +30,17 @@ public class UserController {
 		lst.add(new User(2, "Jerry", 29));
 		lst.add(new User(3, "Nancy", 27));
 		model.addAttribute("list", lst);
+		return "demo2";
+	}
+	
+	@RequestMapping("demo3")
+	public String demo3(HttpServletRequest request, Model model) {
+		//Request
+		request.setAttribute("request", "request data");
+		//Session
+		request.getSession().setAttribute("session", "session data");
+		//Application
+		request.getSession().getServletContext().setAttribute("application", "Application data");
 		return "demo2";
 	}
 	
