@@ -6,17 +6,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.springbootvalidation.model.UserModel;
+import com.example.springbootvalidation.model.User;
 
 @Controller
 public class UserController {
 	@RequestMapping("add")
-	public String toAdd(UserModel user) {
+	public String toAdd(User user) {
 		return "add";
-	}
+	} 
 	
 	@RequestMapping("addUser")
-	public String add(@Valid UserModel user, BindingResult result) {
+	public String add(@Valid User user, BindingResult result) {
 		if(result.hasErrors()) {
 			return "add";
 		}
