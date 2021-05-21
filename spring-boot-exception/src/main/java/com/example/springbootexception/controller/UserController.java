@@ -20,19 +20,19 @@ public class UserController {
 		return "update";
 	}
 	
-	@ExceptionHandler(value= {ArithmeticException.class})
-	public ModelAndView handlerArithmeticException(Exception e) {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("exception", e.toString());
-		modelAndView.setViewName("mathError");
-		return modelAndView;
-	}
-	
-	@ExceptionHandler(value= {NullPointerException.class})
-	public ModelAndView handleNullPointerException(Exception e) {
-		ModelAndView modelAndView = new ModelAndView();
-		modelAndView.addObject("exception", e.toString());
-		modelAndView.setViewName("nullPointerError");
-		return modelAndView;
-	}
+//	@ExceptionHandler(value= {ArithmeticException.class})
+//	public ModelAndView handlerArithmeticException(Exception e) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.addObject("exception", e.toString());
+//		modelAndView.setViewName("mathError");
+//		return modelAndView;
+//	}
+//	
+//	@ExceptionHandler(value= {NullPointerException.class})
+//	public ModelAndView handleNullPointerException(Exception e) {
+//		ModelAndView modelAndView = new ModelAndView();
+//		modelAndView.addObject("exception", e.toString());
+//		modelAndView.setViewName("nullPointerError");
+//		return modelAndView;
+//	}
 }
