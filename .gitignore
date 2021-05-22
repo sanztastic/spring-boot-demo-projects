@@ -5,3 +5,4 @@ thymeleaf/target/
 demo/target/
 spring-boot-validation/target/
 spring-boot-exception/target/
+spring-boot-websocket/target/
